@@ -4,6 +4,26 @@ li a {
     color: blue;
 }
 
+h1 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+h1, h3 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+h1, h2, a{
+	font-family: "Lucida Console";
+	font-weight: 500;
+	line-height: 1.1;
+	color: white;
+}
+
 body {
     background: white url("images/background.gif") no-repeat right bottom;
 }

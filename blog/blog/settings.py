@@ -41,6 +41,8 @@ INSTALLED_APPS = (
 	'polls',
 )
 
+AUTH_PROFILE_MODULE='polls.User'  
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -83,3 +85,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_URL = './polls/templates/login/'
+LOGIN_REDIRECT_URL = './polls/templates/profile/'

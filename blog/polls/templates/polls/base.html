@@ -1,0 +1,21 @@
+<html>  
+<head>  
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/dist/css/bootstrap.css" />  
+    {% block extrahead %}  
+    {% endblock %}  
+</head>  
+<body>  
+<div id="pageContainer">  
+    <div id="nav_top_right">  
+        {% if user.is_authenticated %}  
+        <p><a href="/polls/logout/">Logout</a></p>  
+        {% else %}  
+        <p><a href="/polls/login/">login</a></p>  
+        {% endif %}  
+    </div>  
+    {% block content %}  
+  
+    {% endblock %}  
+</div>  
+</body>  
+</html>  

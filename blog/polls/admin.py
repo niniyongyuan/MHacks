@@ -1,5 +1,5 @@
 from django.contrib import admin
-from polls.models import Poll, Choice
+from polls.models import Poll, Choice, Hacker
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
@@ -17,8 +17,7 @@ class PollAdmin(admin.ModelAdmin):
     search_fields = ['question']
 
 
-
-
 admin.site.register(Poll, PollAdmin)
+admin.site.register(Hacker)
 
 #You can assign arbitrary HTML classes to each fieldset
