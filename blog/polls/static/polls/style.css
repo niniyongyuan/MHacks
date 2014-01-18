@@ -1,0 +1,9 @@
+li a {
+	font-family: "Lucida Console";
+    font-size: 20px;
+    color: blue;
+}
+
+body {
+    background: white url("images/background.gif") no-repeat right bottom;
+}
