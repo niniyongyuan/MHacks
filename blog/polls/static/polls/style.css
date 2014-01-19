@@ -2,22 +2,18 @@ li a {
 	font-family: "Lucida Console";
     font-size: 20px;
     color: blue;
+    margin: 10;
+    margin-top: 10 ;
+    margin-left: 30;
 }
 
 h1 {
-	font-size: 40px;
-}
-
-h3 {
-	font-size: 25px;
-}
-
-h1, h3 {
+	font-size: 60px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
 
-h1, h2, a{
+h1, li {
 	font-family: "Lucida Console";
 	font-weight: 500;
 	line-height: 1.1;
@@ -25,5 +21,19 @@ h1, h2, a{
 }
 
 body {
-    background: white url("images/background.gif") no-repeat right bottom;
+    background: url("images/background.gif") no-repeat right bottom;
+}
+
+.footerholder {
+	background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.footer {
+    height: 50px;
+    margin: auto;
+    width: 400px;
 }

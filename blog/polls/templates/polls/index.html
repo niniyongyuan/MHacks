@@ -1,16 +1,38 @@
 {% load staticfiles %}
+<title> TEAMUP - Lina Li </title>
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
 
-<h1 id = "title"> Find Your Teammates </h1>
+<li><a href="logout">Logout</a></li>
+<h1 id = "title"> TEAMUP </h1>
 
-<h2 id = "hint"> R u still looking for the most comparable teammates? </h2>
-{% if latest_poll_list %}
-    <ul>
-    {% for poll in latest_poll_list %}
-		<li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+<div style="float: left; width: 50%;">
+<ul>
+<li class = "info">Your Information</li>
+<li><a href="{% url 'polls:detail' 1 %}">Year</a></li>
+<li><a href="{% url 'polls:detail' 2 %}">Type of App</a></li>
+<li><a href="{% url 'polls:detail' 3 %}">Gender</a></li>
+<li><a href="{% url 'polls:detail' 4 %}">skill</a></li>
+<li><a href="{% url 'polls:detail' 5 %}">School</a></li>
+<li><a href="{% url 'polls:detail' 6 %}">Constellation</a></li>
+
+</ul>
+</div>
+
+<div style="float: right; width: 50%;">
+<ul>
+<li class = "info">Your preference</li>
+<li><a href="{% url 'polls:detail' 1 %}">Year</a></li>
+<li><a href="{% url 'polls:detail' 2 %}">Type of App</a></li>
+<li><a href="{% url 'polls:detail' 3 %}">Gender</a></li>
+<li><a href="{% url 'polls:detail' 4 %}">skill</a></li>
+<li><a href="{% url 'polls:detail' 5 %}">School</a></li>
+<li><a href="{% url 'polls:detail' 6 %}">Constellation</a></li>
+
+</ul>
+</div>
+<div class="footerholder">
+	<div class="footer" >
+	Copyright © Lina Li 	Megan Chen</div>
+	</div>
+</div>
