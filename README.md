@@ -14,3 +14,7 @@ Hack Buddies does not cost a single fraction of a cent. Just create an account a
 Carpe Diem!
 
 --Lina Li and Megan Chen, Jan 19, 9:00 am in MHacks.
+
+(Tools used: Python, Django, PHP, SQL, SQLite, HTML, CSS, JavaScript)
+
+Disclaimer: This was also our first hackathon web app made in Django, as well as our first one with PHP/SQL/server-side database programming. So it's a fine first :)
