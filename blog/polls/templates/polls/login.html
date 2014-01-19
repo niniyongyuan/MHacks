@@ -7,19 +7,36 @@
     {% endif %}  
     <div class="register_div">  
         {% if form.username.errors %} <p class="error"> {{ form.username.errors }} </p> {% endif %}  
-        <p><label for="username" {% if form.username.errors %} class="error" {% endif %}>Username:</label></p>  
-        <p>{{ form.username }}</p>  
+        <p><center><label for="username" {% if form.username.errors %} class="error" {% endif %}>Username:</label></center></p>  
+        <p><center>{{ form.username }}</center></p>  
     </div>  
     <div class="register_div">  
         {% if form.password.errors %} <p class="error"> {{ form.password.errors }} </p> {% endif %}  
-        <p><label for="password" {% if form.password.errors %} class="error" {% endif %}>Password:</label></p>  
-        <p>{{ form.password}}</p>  
+        <p><center><label for="password" {% if form.password.errors %} class="error" {% endif %}>Password:</label></center></p>  
+        <p><center>{{ form.password}}</center></p>  
     </div>  
-    <p><input type="submit" value="login" alt="register"></p>  
+    <p><center><input type="submit" value="login" alt="register"></center></p><br>
+    <div style="width:1000px; height:150px; background-color:#FFFF00">
+    <h1><strong><center>Feeling lonely without any helpful coders, developers, designers, or engineers around you?</center></strong></h1>
+    <h1><strong><center>Do not fret. We've got you covered.</center></strong></h1>
+    </div>
+    <br>
+    <div>
+    <h2 class="command"><center><font face="Courier">$ make team<blink><font face="Courier">|</font></blink></font></center></h2>
+    </div>
+    <br>
+    <div style="width:1000px; height:150px; background-color:#00FFCC">
+    <p>One's a student. Two's a pair. Three's a crowd. Four's a party. Indeed, we know two heads are better than one. After all, the feeling of belonging to a group is always more fun, right?</p>
+    <p>Stuck finding a teammate amongst one of over a thousand students at a hackathon? Dying to find the most competent web developer, graphic designer, or mobile developer out there? Well, guess what. You are not alone. As a matter of fact, you will not be alone anymore, and neither well any of your friends, thanks to Hack Buddies.</p>
+    </div>
+    <div style="width:1000px; height:150px; background-color:#00FFFF"><h2>Instant teammate searches.</h2>
+    <p>With just a few responses to some survey-style questions related to qualities you may try to look for in a potential teammate, followed by a single click of a button, Hack Buddies gives you your most compatible potential teammates right on the go. No need to wait.</p>
+    </div>
+    <div style="width:1000px; height:150px; background-color:#00FFCC"><h2>Organized results.</h2>
+    <p>Once you fill in your preferences for potential teammates, Hack Buddies's search results will sort the top potential teammates for you in order from highest to lowest overall compatibility rating. From the results, you can view hackers' compatibility ratings with you, both overall and category-wise, as well as their responses and commentary about possible ideas they are brainstorming for creative project ideas.</p>
+    </div>
+    <div style="width:1000px; height:150px; background-color:#00FFFF"><h2>And it's free, too.</h2>
+    <p>Yup, you heard of us. Hack Buddies does not cost a single fraction of a cent. Just create an account and we'll take care of the rest. :)</p>
+    </div>
 </form>  
-<body>
-    <iframe width="420" height="345"
-src="http://www.youtube.com/embed/XGSy3_Czz8k">
-</iframe>
-</body>
 {% endblock %}  
