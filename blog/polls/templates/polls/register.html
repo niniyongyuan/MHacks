@@ -1,12 +1,7 @@
 {% extends "polls/base.html" %}  
 {% block extrahead %}  
     <script src="http://libs.baidu.com/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>  
-    <script src="http://libs.baidu.com/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>  
-    <script>  
-     $(function() {  
-             $( "#id_birthday" ).datepicker();  
-             });  
-    </script>  
+    <script src="http://libs.baidu.com/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>   
 {% endblock %}  
 {% block content %}  
 <form action="" method="post">{% csrf_token %}  
@@ -20,7 +15,9 @@
     </div>  
     <div class="register_div">  
         {% if form.email.errors %} <p class="error"> {{ form.email.errors }} </p> {% endif %}  
-        <p><label for="email" {% if form.email.errors %} class="error" {% endif %}>Email:</label></p>  
+
+        <p><label for="email" {% if form.email.errors%} class="error" {% endif %}>Email:</label></p>  
+
         <p>{{ form.email}}</p>  
     </div>  
     <div class="register_div">  
@@ -32,17 +29,12 @@
         {% if form.password1.errors %} <p class="error"> {{ form.password1.errors }} </p> {% endif %}  
         <p><label for="password1" {% if form.password1.errors %} class="error" {% endif %}>Verify Password:</label></p>  
         <p>{{ form.password1}}</p>  
-    </div>  
-    <div class="register_div">  
-        {% if form.birthday.errors %} <p class="error"> {{ form.birthday.errors }} </p> {% endif %}  
-        <p><label for="birthday" {% if form.birthday.errors %} class="error" {% endif %}>Birthday:</label></p>  
-        <p>{{ form.birthday}}</p>  
-    </div>  
+    </div>   
     <div class="register_div">  
         {% if form.name.errors %} <p class="error"> {{ form.name.errors }} </p> {% endif %}  
         <p><label for="name" {% if form.name.errors %} class="error" {% endif %}>Name:</label></p>  
         <p>{{ form.name}}</p>  
     </div>  
-    <p><input type="submit" alt="register"></p>  
+    <p><input type="submit" value="register" alt="register"></p>  
 </form>  
 {% endblock %}  

@@ -41,3 +41,9 @@ class Choice(models.Model):
 
     def __unicode__(self):
 		return self.choice_text
+
+class Video(models.Model):
+    link = models.URLField()
+
+    def __unicode__(self):
+        return self.link  

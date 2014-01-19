@@ -45,12 +45,15 @@ def register(request):
 
     if request.method =='POST':  
         form = RegistrationForm(request.POST)  
-        if form.is_valid():  
+        if form.is_valid(): 
+            if User.objects.filter(email=form.cleaned_data['email']).exists(): 
+                return HttpResponseRedirect('/polls/register', {
+            'error_message': "You didn't select a choice.",}) 
             user =User.objects.create_user(username=form.cleaned_data['username'],email=form.cleaned_data['email'],password=form.cleaned_data['password'])  
             user.save()  
-            hacker=Hacker(user=user,name=form.cleaned_data['name'],birthday=form.cleaned_data['birthday'])  
+            hacker=Hacker(user=user,name=form.cleaned_data['name'],)  
             hacker.save()  
-            return HttpResponseRedirect('/polls/loggedin')  
+            return HttpResponseRedirect('/polls/register')  
         else:
             return render_to_response('polls/register.html',{'form':form},context_instance=RequestContext(request))  
     else: 
@@ -109,6 +112,9 @@ class IndexView(generic.ListView):
         pub_date__lte=timezone.now()
     ).order_by('-pub_date')[:5]
 
+def index(request):
+    full_list = Video.objects.all()
+    return render_to_response('polls/login.html', {'full_list': full_list})
 
 class DetailView(generic.DetailView):
     model = Poll

@@ -12,6 +12,7 @@ class RegistrationForm(ModelForm):
     class Meta:  
         model=Hacker  
         exclude=('user',)  
+    
     def clean_username(self):  
         username=self.cleaned_data['username']  
         try:  
@@ -19,11 +20,14 @@ class RegistrationForm(ModelForm):
         except User.DoesNotExist:  
             return username  
         raise forms.ValidationError("That username is already taken,please select another.")  
+    
     def clean(self):  
-        if self.cleaned_data['password'] != self.cleaned_data['password1']:  
+        word = self.cleaned_data['password'];
+        repeat = self.cleaned_data['password1'];
+        if word != "" and repeat != "" and word != repeat:  
                 raise forms.ValidationError("The passwords did not match. Please try again.")  
         return self.cleaned_data  
 
 class LoginForm(forms.Form):  
-    username    =forms.CharField(label=(u'User Name'))  
-    password    =forms.CharField(label=(u'Password'),widget=forms.PasswordInput(render_value=False))  
+    username = forms.CharField(label=(u'User Name'))  
+    password = forms.CharField(label=(u'Password'),widget=forms.PasswordInput(render_value=False))  
