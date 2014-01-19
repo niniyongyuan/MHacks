@@ -1,20 +1,16 @@
-MHacks
+Hack Buddies
 ======
 
-36 hours of hacking in the world largest hackthon.
+One's a student. Two's a pair. Three's a crowd. Four's a party. Indeed, we know two heads are better than one. After all, the feeling of belonging to a group is always more fun, right?
 
-The main idea is helping hackers to join a team. Somehow, as one of two-member team, we challenge ourselves by using django to bulid a web app. None of us used it before. After 24 hours working, the basic framework is done. We even spend some time polishing it and design a logo.
+Stuck finding a teammate amongst one of over a thousand students at a hackathon? Dying to find the most competent web developer, graphic designer, or mobile developer out there? Well, guess what. You are not alone. As a matter of fact, you will not be alone anymore, and neither well any of your friends, thanks to Hack Buddies.
 
-For the analysis part, using matching algorithm discovered by Jack Edmonds is a choice. Due to the time limitation, we do not have time to combine those two parts. We could also give different weights based on the experience, and calculate the euclidean distance after normalization. Another one which is more accurate should be based on statitics. Researching a survey on the hackers who join Mhacks, then based on their rating, we could give a more reasonable weight. Then the lonely hacker could find teammates.
+With just a few responses to some survey-style questions related to qualities you may try to look for in a potential teammate, followed by a single click of a button, Hack Buddies gives you your most compatible potential teammates right on the go. No need to wait.
 
+Once you fill in your preferences for potential teammates, Hack Buddies's search results will sort the top potential teammates for you in order from highest to lowest overall compatibility rating. From the results, you can view hackers' compatibility ratings with you, both overall and category-wise, as well as their responses and commentary about possible ideas they are brainstorming for creative project ideas.
 
-
-While most of the hackers choose to work with the language and technic theay are proficient, I really cherish these 30 hours. I learn something new, do some exciting stuff and have tons of fun.
-
-
-
+Hack Buddies does not cost a single fraction of a cent. Just create an account and we'll take care of the rest. :)
 
 Carpe Diem!
 
-
---NN Jan 19 2:01 am in MHacks.
+--Lina Li and Megan Chen, Jan 19, 9:00 am in MHacks.
