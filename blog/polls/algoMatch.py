@@ -8,13 +8,26 @@
 import math
 import random
 
-def genderMatch(genderA, genderB):
-    if (genderA == genderB):
+def genderMatch(genderA, genderB, teammateGenderA, teammateGenderB):
+    if (genderB == teammateGenderA and genderA == teammateGenderB):
         return 100.0
-    if (genderA == "Male" and genderB == "Female"):
-        return 0.0
-    if (genderA == "Other" or genderB == "Other"):
+    if (teammateGenderA == "No Preference" and teammateGenderB == "No Preference"):
+        return 75.0
+    if (teammateGenderA == "No Preference" and teammateGenderB != "No Preference"):
+        if (genderA == teammateGenderB):
+            return 100.0
+        else:
+            return 50.0
+    if (teammateGenderB == "No Preference" and teammateGenderA != "No Preference"):
+        if (genderB == teammateGenderA):
+            return 100.0
+        else:
+            return 50.0
+    if (genderB == teammateGenderA and genderA != teammateGenderB or
+        genderB != teammateGenderA and genderA == teammateGenderB):
         return 50.0
+    if (genderB != teammateGenderA and genderA != teammateGenderB):
+        return 0.0
 
 def schoolMatch(schoolA, schoolB):
     if (schoolA == schoolB):
